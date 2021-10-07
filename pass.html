@@ -5,7 +5,7 @@
     </head>
  
 <body>
-<h4>Pass phraseby Harathi Katta</h4>
+<h4>Pass phrase by Harathi Katta</h4>
 <h3>Getting input</h3>
 <form>
     <label for="form1_secret"> Enter the secret phrase</label>
@@ -25,7 +25,8 @@ var correct = 0
 var wrong = 0
 
 
-function processPhrase (){
+function processPhrase ()
+{
     console.log("Getting form values")
     secret = document.getElementById("form1_secret").value
     guess = document.getElementById("form1_guess").value
@@ -38,7 +39,9 @@ function processPhrase (){
         correct ++
         alert("Access allowed!")
         out.innerHTML = "correct score"+correct
-    } else {
+    } 
+    else 
+    {
         wrong++
         alert ("Access denied!")
         out.innerHTML ="wrong score"+ wrong
@@ -46,7 +49,35 @@ function processPhrase (){
     out.innerHTML = "correct count"+ correct +" ; wrong count "+ wrong
 }
 </script>
+<div class ="container">
+<img src ="Tiger.jpg" width="200" height="200"  onclick="newImage()" id="image" >
+<br>
+<script>
+    var usingImage = 1
+    function newImage()
+    {
+        switch(usingImage )
+        {
+            case 1:
+              //  var img = document.createElement("img")
+                //img.src = "deer.jpg"
+                document.getElementById("image").src = "deer.jpg"
+                usingImage = 2
+                break
+            case 2:
+                //var img1 = document.createElement("img1")
+                //img1.src = "elk.jpg"
+                document.getElementById("image").src = "elk.jpg"
+                usingImage = 3
+                break
+            case 3:
+                document.getElementById("image").src = "vaquita.jpg"
+                usingImage = 1
+                break
+        }
+    }
+</script>
 
-
+</div>
 </body>
 </html>
