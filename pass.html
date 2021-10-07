@@ -39,12 +39,16 @@ function processPhrase ()
         correct ++
         alert("Access allowed!")
         out.innerHTML = "correct score"+correct
-    } 
+    }
     else 
     {
         wrong++
         alert ("Access denied!")
         out.innerHTML ="wrong score"+ wrong
+        if(wrong>3){
+            alert("Account blocked")
+        }
+
     }
     out.innerHTML = "correct count"+ correct +" ; wrong count "+ wrong
 }
